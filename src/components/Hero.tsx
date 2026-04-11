@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <div className="profile-card glass-panel p-6 max-w-sm flex flex-col items-center gap-6">
               <Image
-                src="https://i.postimg.cc/bNjb71Xg/Gemini-Generated-Image-ubk4b0ubk4b0ubk4.png"
+                src="https://i.postimg.cc/tJPHzxqs/Professional-modern-headshot-with-cool-tones.png"
                 alt="Gururamdas TP"
                 width={260}
                 height={260}
