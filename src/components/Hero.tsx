@@ -52,7 +52,7 @@ export default function Hero() {
                 alt="Gururamdas TP"
                 width={260}
                 height={260}
-                className="w-64 h-64 rounded-full object-cover border-4 border-blue-500 shadow-2xl"
+                className="w-64 h-64 rounded-full object-cover object-top border-4 border-blue-500 shadow-2xl"
               />
               <div className="flex justify-center gap-3">
                 <span className="badge-icon">AI/ML</span>
