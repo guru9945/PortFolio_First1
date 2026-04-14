@@ -37,12 +37,12 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <About id="about" />
-      <Skills id="skills" />
-      <Experience id="experience" />
-      <Projects id="projects" />
-      <Services id="services" />
-      <Contact id="contact" />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Services />
+      <Contact />
       <Footer />
     </div>
   );
