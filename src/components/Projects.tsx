@@ -33,8 +33,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-black scroll-mt-28">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-16 sm:py-20 bg-black scroll-mt-20 sm:scroll-mt-28">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,42 +44,46 @@ export default function Projects() {
           Featured Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="project-card glass-panel p-6 group"
+              className="project-card glass-panel p-4 sm:p-6 group"
             >
-              <div className="relative overflow-hidden rounded-xl mb-4 h-48">
+              <div className="relative overflow-hidden rounded-xl mb-4 h-40 sm:h-48">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  unoptimized
                   className="object-cover"
                 />
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{project.title}</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="tech-badge-mini bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-sm">
+                  <span key={i} className="tech-badge-mini bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs sm:text-sm">
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <div className="card-links flex gap-4">
-                <a href={project.github} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <GitBranch size={16} />
+              <div className="card-links flex gap-3 sm:gap-4">
+                <a href={project.github} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                  <GitBranch size={14} className="sm:hidden" />
+                  <GitBranch size={16} className="hidden sm:block" />
                   Code
                 </a>
-                <a href={project.demo} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <ExternalLink size={16} />
+                <a href={project.demo} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                  <ExternalLink size={14} className="sm:hidden" />
+                  <ExternalLink size={16} className="hidden sm:block" />
                   Demo
                 </a>
               </div>

@@ -20,8 +20,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-16 sm:py-20 bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,32 +38,37 @@ export default function Experience() {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="exp-card glass-panel p-8 mb-8"
+              className="exp-card glass-panel p-6 sm:p-8 mb-6 sm:mb-8"
             >
-              <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-                <div className="exp-badge bg-blue-500 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2">
-                  <Briefcase size={16} />
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
+                <div className="exp-badge bg-blue-500 text-white px-3 sm:px-4 py-2 rounded-full font-semibold flex items-center gap-2 text-sm sm:text-base">
+                  <Briefcase size={14} className="sm:hidden" />
+                  <Briefcase size={16} className="hidden sm:block" />
                   {exp.title}
                 </div>
                 <div className="text-gray-300">
-                  <span className="font-semibold text-white">{exp.company}</span>
-                  <span className="flex items-center gap-2 text-sm text-gray-400 mt-1">
-                    <MapPin size={14} /> {exp.location}
-                  </span>
-                  <span className="flex items-center gap-2 text-sm text-gray-400">
-                    <Calendar size={14} /> {exp.period}
-                  </span>
+                  <span className="font-semibold text-white text-sm sm:text-base">{exp.company}</span>
+                  <div className="flex flex-col sm:flex-row sm:gap-4 text-xs sm:text-sm text-gray-400 mt-1">
+                    <span className="flex items-center gap-2">
+                      <MapPin size={12} className="sm:hidden" />
+                      <MapPin size={14} className="hidden sm:block" /> {exp.location}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar size={12} className="sm:hidden" />
+                      <Calendar size={14} className="hidden sm:block" /> {exp.period}
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <p className="text-gray-300 mb-4">{exp.description}</p>
+              <p className="text-gray-300 mb-4 text-sm sm:text-base">{exp.description}</p>
 
               <div className="exp-achievements">
-                <h4 className="text-white font-semibold mb-2">Key Achievements:</h4>
+                <h4 className="text-white font-semibold mb-2 text-sm sm:text-base">Key Achievements:</h4>
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-300">
-                      <span className="text-blue-400 mt-1">•</span>
+                    <li key={i} className="flex items-start gap-2 text-gray-300 text-sm sm:text-base">
+                      <span className="text-blue-400 mt-1 text-xs">•</span>
                       {achievement}
                     </li>
                   ))}
