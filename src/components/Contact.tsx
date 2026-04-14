@@ -91,7 +91,7 @@ export default function Contact() {
             <div className="space-y-4 mb-6 sm:mb-8">
               <div className="contact-item flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-800/50 rounded-lg">
                 <div className="bg-blue-500 p-2 sm:p-3 rounded-full flex-shrink-0">
-                  <Mail className="text-white" size={16} className="sm:hidden" />
+                  <Mail className="text-white sm:hidden" size={16} />
                   <Mail className="text-white hidden sm:block" size={20} />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -106,7 +106,7 @@ export default function Contact() {
 
               <div className="contact-item flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-800/50 rounded-lg">
                 <div className="bg-blue-500 p-2 sm:p-3 rounded-full flex-shrink-0">
-                  <Phone className="text-white" size={16} className="sm:hidden" />
+                  <Phone className="text-white sm:hidden" size={16} />
                   <Phone className="text-white hidden sm:block" size={20} />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -117,7 +117,7 @@ export default function Contact() {
 
               <div className="contact-item flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-800/50 rounded-lg">
                 <div className="bg-blue-500 p-2 sm:p-3 rounded-full flex-shrink-0">
-                  <MapPin className="text-white" size={16} className="sm:hidden" />
+                  <MapPin className="text-white sm:hidden" size={16} />
                   <MapPin className="text-white hidden sm:block" size={20} />
                 </div>
                 <div className="min-w-0 flex-1">
